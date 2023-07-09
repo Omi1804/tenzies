@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;1,500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Karla', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 20px;
+    background: #0B2434;
+}
+
+main {
+    max-width: 800px;
+    height: 700px;
+    margin: 3rem auto;
+    background-color: #F5F5F5;
+    border-radius: 10px;
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    display: grid;
+    grid-template: auto auto/ repeat(5, 1fr);
+    text-align: center;
+    gap: 20px;
+    justify-items: center;
+}
+
+.num {
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: #59E391;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.3rem;
+    border-radius: 5px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.roll-button {
+    width: 7rem;
+    height: 3rem;
+    background: #5035FF;
+    color: white;
+    font-family: 'Karla';
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+.roll-button:focus{
+    outline: none;
+}
+.roll-button:active{
+    box-shadow: inset 5px 5px 10px -3px rgba(0, 0, 0, 0.7);
+}
+.summary{
+    max-width: 50rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    text-align: center;
+    position: relative;
+    top: -10;
+}
+.content{
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+.score{
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+/* Mobile devices */
+@media only screen and (max-width: 600px) {
+    main {
+        height: auto;
+        margin: 1rem auto;
+        padding: 20px 10px;
+    }
+    .container {
+        grid-template: auto auto/ repeat(2, 1fr);
+        margin: 3rem;
+    }
+    .num {
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 1.5rem;
+    }
+    .roll-button {
+        width: 6rem;
+        height: 2.5rem;
+        font-size: 1.2rem;
+    }
+    .summary {
+        margin: 2rem;
+        max-width: 100%;
+        font-size: 1.2rem;
+        top: 0;
+    }
+    .content {
+        margin: 2rem;
+        flex-direction: row;
+        gap: 1rem;
+    }
+    .score {
+        font-size: 1.2rem;
+    }
+}
